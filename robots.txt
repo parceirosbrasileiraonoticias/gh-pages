@@ -4,4 +4,4 @@ User-agent: GPTBot
 Disallow: /
 User-agent: *
 Disallow:
-Sitemap: https://nerdexpo.com.br/sitemap.xml
+Sitemap: https://www.nerdexpo.com.br/sitemap.xml

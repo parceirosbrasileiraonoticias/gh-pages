@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
     <title>nerd expo</title>
-    <link href="https://nerdexpo.com.br/feed.xml" rel="self" />
-    <link href="https://nerdexpo.com.br" />
+    <link href="https://www.nerdexpo.com.br/feed.xml" rel="self" />
+    <link href="https://www.nerdexpo.com.br" />
     <updated>2025-01-09T22:49:34+00:00</updated>
     <author>
         <name>Juliano Yum</name>
     </author>
-    <id>https://nerdexpo.com.br</id>
+    <id>https://www.nerdexpo.com.br</id>
 
     <entry>
         <title>Teste</title>
         <author>
             <name>Juliano Yum</name>
         </author>
-        <link href="https://nerdexpo.com.br/teste/"/>
-        <id>https://nerdexpo.com.br/teste/</id>
+        <link href="https://www.nerdexpo.com.br/teste/"/>
+        <id>https://www.nerdexpo.com.br/teste/</id>
 
         <updated>2025-01-09T22:49:34+00:00</updated>
             <summary>
