@@ -2,16 +2,16 @@
     "version": "https://jsonfeed.org/version/1",
     "title": "nerd expo",
     "description": "",
-    "home_page_url": "https://parceirosbrasileiraonoticias.github.io/gh-pages",
-    "feed_url": "https://parceirosbrasileiraonoticias.github.io/gh-pages/feed.json",
+    "home_page_url": "https://nerdexpo.com.br",
+    "feed_url": "https://nerdexpo.com.br/feed.json",
     "user_comment": "",
     "author": {
         "name": "Juliano Yum"
     },
     "items": [
         {
-            "id": "https://parceirosbrasileiraonoticias.github.io/gh-pages/teste/",
-            "url": "https://parceirosbrasileiraonoticias.github.io/gh-pages/teste/",
+            "id": "https://nerdexpo.com.br/teste/",
+            "url": "https://nerdexpo.com.br/teste/",
             "title": "Teste",
             "summary": "aaaa",
             "content_html": "<p>aaaa</p>",
