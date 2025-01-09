@@ -3,82 +3,30 @@
     <title>nerd expo</title>
     <link href="https://parceirosbrasileiraonoticias.github.io/gh-pages/feed.xml" rel="self" />
     <link href="https://parceirosbrasileiraonoticias.github.io/gh-pages" />
-    <updated>2025-01-08T03:45:12+00:00</updated>
+    <updated>2025-01-09T22:49:34+00:00</updated>
     <author>
         <name>Juliano Yum</name>
     </author>
     <id>https://parceirosbrasileiraonoticias.github.io/gh-pages</id>
 
     <entry>
-        <title>jj</title>
+        <title>Teste</title>
         <author>
             <name>Juliano Yum</name>
         </author>
-        <link href="https://parceirosbrasileiraonoticias.github.io/gh-pages/jj.html"/>
-        <id>https://parceirosbrasileiraonoticias.github.io/gh-pages/jj.html</id>
+        <link href="https://parceirosbrasileiraonoticias.github.io/gh-pages/teste/"/>
+        <id>https://parceirosbrasileiraonoticias.github.io/gh-pages/teste/</id>
 
-        <updated>2025-01-08T03:45:12+00:00</updated>
-            <summary></summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>gg</title>
-        <author>
-            <name>Juliano Yum</name>
-        </author>
-        <link href="https://parceirosbrasileiraonoticias.github.io/gh-pages/gg.html"/>
-        <id>https://parceirosbrasileiraonoticias.github.io/gh-pages/gg.html</id>
-
-        <updated>2025-01-08T03:16:42+00:00</updated>
-            <summary></summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>nat</title>
-        <author>
-            <name>Juliano Yum</name>
-        </author>
-        <link href="https://parceirosbrasileiraonoticias.github.io/gh-pages/nat.html"/>
-        <id>https://parceirosbrasileiraonoticias.github.io/gh-pages/nat.html</id>
-
-        <updated>2025-01-08T03:06:38+00:00</updated>
-            <summary></summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>oi</title>
-        <author>
-            <name>Juliano Yum</name>
-        </author>
-        <link href="https://parceirosbrasileiraonoticias.github.io/gh-pages/oi.html"/>
-        <id>https://parceirosbrasileiraonoticias.github.io/gh-pages/oi.html</id>
-
-        <updated>2025-01-08T02:42:11+00:00</updated>
-            <summary></summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>teste</title>
-        <author>
-            <name>Juliano Yum</name>
-        </author>
-        <link href="https://parceirosbrasileiraonoticias.github.io/gh-pages/teste.html"/>
-        <id>https://parceirosbrasileiraonoticias.github.io/gh-pages/teste.html</id>
-
-        <updated>2025-01-08T02:25:17+00:00</updated>
-            <summary></summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>Ola222</title>
-        <author>
-            <name>Juliano Yum</name>
-        </author>
-        <link href="https://parceirosbrasileiraonoticias.github.io/gh-pages/ola.html"/>
-        <id>https://parceirosbrasileiraonoticias.github.io/gh-pages/ola.html</id>
-
-        <updated>2025-01-08T02:06:16+00:00</updated>
-            <summary></summary>
-        <content></content>
+        <updated>2025-01-09T22:49:34+00:00</updated>
+            <summary>
+                <![CDATA[
+                    aaaa
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>aaaa</p>
+            ]]>
+        </content>
     </entry>
 </feed>
