@@ -3,42 +3,10 @@
     <title>nerd expo</title>
     <link href="https://www.nerdexpo.com.br/feed.xml" rel="self" />
     <link href="https://www.nerdexpo.com.br" />
-    <updated>2025-01-12T01:23:07+00:00</updated>
+    <updated>1970-01-01T00:00:00+00:00</updated>
     <author>
         <name>Juliano Yum</name>
     </author>
     <id>https://www.nerdexpo.com.br</id>
 
-    <entry>
-        <title>etst2</title>
-        <author>
-            <name>Juliano Yum</name>
-        </author>
-        <link href="https://www.nerdexpo.com.br/etst2/"/>
-        <id>https://www.nerdexpo.com.br/etst2/</id>
-
-        <updated>2025-01-12T01:23:07+00:00</updated>
-            <summary></summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>Teste11</title>
-        <author>
-            <name>Juliano Yum</name>
-        </author>
-        <link href="https://www.nerdexpo.com.br/teste/"/>
-        <id>https://www.nerdexpo.com.br/teste/</id>
-
-        <updated>2025-01-09T22:49:34+00:00</updated>
-            <summary>
-                <![CDATA[
-                    aaaa
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>aaaa</p>
-            ]]>
-        </content>
-    </entry>
 </feed>

@@ -9,31 +9,5 @@
         "name": "Juliano Yum"
     },
     "items": [
-        {
-            "id": "https://www.nerdexpo.com.br/etst2/",
-            "url": "https://www.nerdexpo.com.br/etst2/",
-            "title": "etst2",
-            "author": {
-                "name": "Juliano Yum"
-            },
-            "tags": [
-            ],
-            "date_published": "2025-01-12T01:23:07+00:00",
-            "date_modified": "2025-01-12T01:23:07+00:00"
-        },
-        {
-            "id": "https://www.nerdexpo.com.br/teste/",
-            "url": "https://www.nerdexpo.com.br/teste/",
-            "title": "Teste11",
-            "summary": "aaaa",
-            "content_html": "<p>aaaa</p>",
-            "author": {
-                "name": "Juliano Yum"
-            },
-            "tags": [
-            ],
-            "date_published": "2025-01-09T22:49:34+00:00",
-            "date_modified": "2025-01-12T01:20:56+00:00"
-        }
     ]
 }
