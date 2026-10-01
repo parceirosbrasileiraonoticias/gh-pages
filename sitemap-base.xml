@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+        <loc>https://www.nerdexpo.com.br/</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    
+    <url>
+        <loc>https://www.nerdexpo.com.br/termos-de-uso/</loc>
+        <lastmod>2025-03-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.nerdexpo.com.br/politica-de-privacidade/</loc>
+        <lastmod>2025-03-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.nerdexpo.com.br/pagina-sobre/</loc>
+        <lastmod>2025-03-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.nerdexpo.com.br/contato/</loc>
+        <lastmod>2025-03-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+
+    
+
+    
+    <url>
+        <loc>https://www.nerdexpo.com.br/categoria/filmes/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.nerdexpo.com.br/categoria/series/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.nerdexpo.com.br/categoria/games/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.nerdexpo.com.br/categoria/livros/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.nerdexpo.com.br/categoria/tecnologia/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.nerdexpo.com.br/categoria/nerds/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+
+</urlset>
