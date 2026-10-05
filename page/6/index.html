@@ -11,451 +11,355 @@
     <link rel="icon" href="/static/uploads/nerd-expo.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="/static/uploads/nerd-expo.png">
     
-    
-    <!-- Bootstrap CSS (Necessário para os blocos do CMS) -->
+
+    <link rel="stylesheet" href="/themes/gshow_pop/assets/css/style.css?v=1.1">
+    <!-- Bootstrap Icons (Usado internamente pelo CMS e para redes sociais) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Algumas lógicas do CMS dependem de classes Bootstrap puras (RaioX). Injetamos a versão ultra-leve do bootstrap apenas para os blocos do CMS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <link rel="stylesheet" href="/themes/crazystack/assets/css/style.css?v=2.1">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     
 </head>
 <body>
-<header class="header">
-    <div class="container">
-        <a href="/" class="logo">
-            <span class="cursor"></span>
-            Nerd Expo
-        </a>
-        <nav style="overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch; scrollbar-width: none;">
+<header class="gs-header">
+    <div class="gs-header__container">
+        <!-- Botão Menu Hamburguer -->
+        <button class="gs-header__menu-btn" id="gs-menu-toggle" aria-label="Abrir Menu">
+            <i class="bi bi-list"></i>
+        </button>
+
+        <!-- Logo Centralizada -->
+        <a href="/" class="gs-header__logo">
             
-            <ul class="nav-links" style="display: flex; gap: 1.5rem; list-style: none; padding: 0; margin: 0; align-items: center;">
-                
-                    <li><a href="/"><i class="bi bi-house"></i> Início</a></li>
-                    
-                    
-                    <li><a href="/categoria/filmes/">Filmes</a></li>
-                    
-                    <li><a href="/categoria/series/">Séries</a></li>
-                    
-                    <li><a href="/categoria/games/">Games</a></li>
-                    
-                    <li><a href="/categoria/livros/">Livros</a></li>
-                    
-                    <li><a href="/categoria/tecnologia/">Tecnologia</a></li>
-                    
-                    <li><a href="/categoria/nerds/">Nerds</a></li>
-                    
-                    
-                    
-                    
-                
-            </ul>
-        </nav>
+                <img src="/static/uploads/ICO.png" alt="Nerd Expo">
+            
+        </a>
     </div>
+
+    <!-- Identificador de Categoria Opcional (se não for a página inicial) -->
+    
+        <div class="gs-header__category-tag">Cultura Pop</div>
+    
 </header>
 
-<style>
-/* Esconde a scrollbar no nav mas permite scroll horizontal suave em telas pequenas */
-.header nav::-webkit-scrollbar {
-    display: none;
-}
-@media (max-width: 768px) {
-    .header .container {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    .header nav {
-        width: 100%;
-        padding-bottom: 0.5rem;
-    }
-}
-</style>
+<!-- Overlay Escuro do Menu -->
+<div class="gs-overlay" id="gs-overlay"></div>
 
-
-
-<section class="hero">
-    <div class="container">
-        <span class="hero-kicker">Bem-vindo ao Nerd Expo</span>
-        <h1 class="hero-title"></h1>
-        <p class="hero-desc">
-            
-        </p>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <div class="d-flex justify-content-between align-items-center mb-5 border-bottom border-secondary pb-3">
-            <h2 class="m-0 text-white" style="font-family: var(--font-mono); font-size: 1.5rem;">
-                <i class="bi bi-lightning-charge text-primary"></i> Últimos Artigos
-            </h2>
-        </div>
-
-        <div class="grid-3">
-            
-            <article class="cs-card">
-                <a href="/vantagens-das-ferramentas-digitais-no-setor-financeiro-atual/" class="cs-card-img-wrap">
-                    
-                    <img src="/static/uploads/vantagens-das-ferramentas-digitais-no-setor-financeiro-atual.jpg" alt="None" loading="lazy">
-                    
-                </a>
-                <div class="cs-card-body">
-                    <div class="cs-card-meta">
-                        <span><i class="bi bi-calendar3"></i> 27/02/2026</span>
-                        
-                        <span><i class="bi bi-person"></i> Juliano Yum</span>
-                        
-                    </div>
-                    <h3 class="cs-card-title">
-                        <a href="/vantagens-das-ferramentas-digitais-no-setor-financeiro-atual/">Vantagens das ferramentas digitais no setor financeiro atual</a>
-                    </h3>
-                    <div style="margin-top: auto; padding-top: 1.5rem;">
-                        <a href="/vantagens-das-ferramentas-digitais-no-setor-financeiro-atual/" class="cs-btn" style="width: 100%;">
-                            Ler Análise <i class="bi bi-arrow-right ms-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </article>
-            
-            <article class="cs-card">
-                <a href="/como-escolher-o-parceiro-ideal-para-otimizar-seu-site/" class="cs-card-img-wrap">
-                    
-                    <img src="/static/uploads/como-escolher-o-parceiro-ideal-para-otimizar-seu-site.jpg" alt="None" loading="lazy">
-                    
-                </a>
-                <div class="cs-card-body">
-                    <div class="cs-card-meta">
-                        <span><i class="bi bi-calendar3"></i> 23/02/2026</span>
-                        
-                        <span><i class="bi bi-person"></i> Juliano Yum</span>
-                        
-                    </div>
-                    <h3 class="cs-card-title">
-                        <a href="/como-escolher-o-parceiro-ideal-para-otimizar-seu-site/">Como escolher o parceiro ideal para otimizar seu site</a>
-                    </h3>
-                    <div style="margin-top: auto; padding-top: 1.5rem;">
-                        <a href="/como-escolher-o-parceiro-ideal-para-otimizar-seu-site/" class="cs-btn" style="width: 100%;">
-                            Ler Análise <i class="bi bi-arrow-right ms-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </article>
-            
-            <article class="cs-card">
-                <a href="/guia-completo-para-criar-lives-profissionais-e-atrair-audiencia/" class="cs-card-img-wrap">
-                    
-                    <img src="/static/uploads/guia-completo-para-criar-lives-profissionais-e-atrair-audiencia.jpg" alt="None" loading="lazy">
-                    
-                </a>
-                <div class="cs-card-body">
-                    <div class="cs-card-meta">
-                        <span><i class="bi bi-calendar3"></i> 19/02/2026</span>
-                        
-                        <span><i class="bi bi-person"></i> Juliano Yum</span>
-                        
-                    </div>
-                    <h3 class="cs-card-title">
-                        <a href="/guia-completo-para-criar-lives-profissionais-e-atrair-audiencia/">Guia completo para criar lives profissionais e atrair audiência</a>
-                    </h3>
-                    <div style="margin-top: auto; padding-top: 1.5rem;">
-                        <a href="/guia-completo-para-criar-lives-profissionais-e-atrair-audiencia/" class="cs-btn" style="width: 100%;">
-                            Ler Análise <i class="bi bi-arrow-right ms-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </article>
-            
-            <article class="cs-card">
-                <a href="/top-5-acessorios-de-audio-sem-fio-para-jogos-online/" class="cs-card-img-wrap">
-                    
-                    <img src="/static/uploads/top-5-acessorios-de-audio-sem-fio-para-jogos-online.jpg" alt="None" loading="lazy">
-                    
-                </a>
-                <div class="cs-card-body">
-                    <div class="cs-card-meta">
-                        <span><i class="bi bi-calendar3"></i> 19/02/2026</span>
-                        
-                        <span><i class="bi bi-person"></i> Juliano Yum</span>
-                        
-                    </div>
-                    <h3 class="cs-card-title">
-                        <a href="/top-5-acessorios-de-audio-sem-fio-para-jogos-online/">Top 5 acessórios de áudio sem fio para jogos online</a>
-                    </h3>
-                    <div style="margin-top: auto; padding-top: 1.5rem;">
-                        <a href="/top-5-acessorios-de-audio-sem-fio-para-jogos-online/" class="cs-btn" style="width: 100%;">
-                            Ler Análise <i class="bi bi-arrow-right ms-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </article>
-            
-            <article class="cs-card">
-                <a href="/eficiencia-logistica-e-controle-de-inventario-o-impacto-estrategico-do-erp-para-distribuidoras-no-atacado-moderno/" class="cs-card-img-wrap">
-                    
-                    <img src="/static/uploads/eficiencia-logistica-e-controle-de-inventario-o-impacto-estrategico-do-erp-para-distribuidoras-no-atacado-moderno.jpg" alt="None" loading="lazy">
-                    
-                </a>
-                <div class="cs-card-body">
-                    <div class="cs-card-meta">
-                        <span><i class="bi bi-calendar3"></i> 18/02/2026</span>
-                        
-                        <span><i class="bi bi-person"></i> Juliano Yum</span>
-                        
-                    </div>
-                    <h3 class="cs-card-title">
-                        <a href="/eficiencia-logistica-e-controle-de-inventario-o-impacto-estrategico-do-erp-para-distribuidoras-no-atacado-moderno/">Eficiência Logística e Controle de Inventário: O Impacto Estratégico do ERP para Distribuidoras no Atacado Moderno</a>
-                    </h3>
-                    <div style="margin-top: auto; padding-top: 1.5rem;">
-                        <a href="/eficiencia-logistica-e-controle-de-inventario-o-impacto-estrategico-do-erp-para-distribuidoras-no-atacado-moderno/" class="cs-btn" style="width: 100%;">
-                            Ler Análise <i class="bi bi-arrow-right ms-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </article>
-            
-            <article class="cs-card">
-                <a href="/dicas-para-dominar-shooters-complexos-com-mapas-vastos-e-detalhados/" class="cs-card-img-wrap">
-                    
-                    <img src="/static/uploads/dicas-para-dominar-shooters-complexos-com-mapas-vastos-e-detalhados.jpg" alt="None" loading="lazy">
-                    
-                </a>
-                <div class="cs-card-body">
-                    <div class="cs-card-meta">
-                        <span><i class="bi bi-calendar3"></i> 17/02/2026</span>
-                        
-                        <span><i class="bi bi-person"></i> Juliano Yum</span>
-                        
-                    </div>
-                    <h3 class="cs-card-title">
-                        <a href="/dicas-para-dominar-shooters-complexos-com-mapas-vastos-e-detalhados/">Dicas para dominar shooters complexos com mapas vastos e detalhados</a>
-                    </h3>
-                    <div style="margin-top: auto; padding-top: 1.5rem;">
-                        <a href="/dicas-para-dominar-shooters-complexos-com-mapas-vastos-e-detalhados/" class="cs-btn" style="width: 100%;">
-                            Ler Análise <i class="bi bi-arrow-right ms-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </article>
-            
-            <article class="cs-card">
-                <a href="/como-escolher-o-melhor-proxy-para-campanhas-de-marketing/" class="cs-card-img-wrap">
-                    
-                    <img src="/static/uploads/como-escolher-o-melhor-proxy-para-campanhas-de-marketing.jpg" alt="None" loading="lazy">
-                    
-                </a>
-                <div class="cs-card-body">
-                    <div class="cs-card-meta">
-                        <span><i class="bi bi-calendar3"></i> 15/02/2026</span>
-                        
-                        <span><i class="bi bi-person"></i> Juliano Yum</span>
-                        
-                    </div>
-                    <h3 class="cs-card-title">
-                        <a href="/como-escolher-o-melhor-proxy-para-campanhas-de-marketing/">Como escolher o melhor proxy para campanhas de marketing</a>
-                    </h3>
-                    <div style="margin-top: auto; padding-top: 1.5rem;">
-                        <a href="/como-escolher-o-melhor-proxy-para-campanhas-de-marketing/" class="cs-btn" style="width: 100%;">
-                            Ler Análise <i class="bi bi-arrow-right ms-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </article>
-            
-            <article class="cs-card">
-                <a href="/curiosidades-sobre-o-oscar-2026/" class="cs-card-img-wrap">
-                    
-                    <img src="/static/uploads/curiosidades-sobre-o-oscar-2026.jpg" alt="None" loading="lazy">
-                    
-                </a>
-                <div class="cs-card-body">
-                    <div class="cs-card-meta">
-                        <span><i class="bi bi-calendar3"></i> 09/02/2026</span>
-                        
-                        <span><i class="bi bi-person"></i> Juliano Yum</span>
-                        
-                    </div>
-                    <h3 class="cs-card-title">
-                        <a href="/curiosidades-sobre-o-oscar-2026/">Curiosidades Sobre o Oscar 2026</a>
-                    </h3>
-                    <div style="margin-top: auto; padding-top: 1.5rem;">
-                        <a href="/curiosidades-sobre-o-oscar-2026/" class="cs-btn" style="width: 100%;">
-                            Ler Análise <i class="bi bi-arrow-right ms-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </article>
-            
-            <article class="cs-card">
-                <a href="/engenharia-de-software-e-modernizacao-digital-as-melhores-praticas-no-desenvolvimento-web-de-alta-performance/" class="cs-card-img-wrap">
-                    
-                    <img src="/static/uploads/engenharia-de-software-e-modernizacao-digital-as-melhores-praticas-no-desenvolvimento-web-de-alta-performance.jpg" alt="None" loading="lazy">
-                    
-                </a>
-                <div class="cs-card-body">
-                    <div class="cs-card-meta">
-                        <span><i class="bi bi-calendar3"></i> 06/02/2026</span>
-                        
-                        <span><i class="bi bi-person"></i> Juliano Yum</span>
-                        
-                    </div>
-                    <h3 class="cs-card-title">
-                        <a href="/engenharia-de-software-e-modernizacao-digital-as-melhores-praticas-no-desenvolvimento-web-de-alta-performance/">Engenharia de Software e Modernização Digital: As Melhores Práticas no Desenvolvimento Web de Alta Performance</a>
-                    </h3>
-                    <div style="margin-top: auto; padding-top: 1.5rem;">
-                        <a href="/engenharia-de-software-e-modernizacao-digital-as-melhores-praticas-no-desenvolvimento-web-de-alta-performance/" class="cs-btn" style="width: 100%;">
-                            Ler Análise <i class="bi bi-arrow-right ms-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </article>
-            
-            <article class="cs-card">
-                <a href="/mercado-digital-como-comecar-com-materiais-prontos/" class="cs-card-img-wrap">
-                    
-                    <img src="/static/uploads/mercado-digital-como-comecar-com-materiais-prontos.jpg" alt="None" loading="lazy">
-                    
-                </a>
-                <div class="cs-card-body">
-                    <div class="cs-card-meta">
-                        <span><i class="bi bi-calendar3"></i> 04/02/2026</span>
-                        
-                        <span><i class="bi bi-person"></i> Juliano Yum</span>
-                        
-                    </div>
-                    <h3 class="cs-card-title">
-                        <a href="/mercado-digital-como-comecar-com-materiais-prontos/">Mercado Digital: Como Começar com Materiais Prontos</a>
-                    </h3>
-                    <div style="margin-top: auto; padding-top: 1.5rem;">
-                        <a href="/mercado-digital-como-comecar-com-materiais-prontos/" class="cs-btn" style="width: 100%;">
-                            Ler Análise <i class="bi bi-arrow-right ms-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </article>
-            
-        </div>
-
-        <!-- Paginação Original Preservada -->
+<!-- Menu Oculto (Offcanvas) -->
+<nav class="gs-nav-offcanvas" id="gs-offcanvas">
+    <button class="gs-nav-offcanvas__close" id="gs-menu-close" aria-label="Fechar Menu">
+        <i class="bi bi-x-lg"></i>
+    </button>
+    <br><br>
+    
+        <a href="/">INÍCIO</a>
         
-        <div class="mt-5 text-center">
+            <a href="/categoria/filmes/">Filmes</a>
+        
+            <a href="/categoria/series/">Séries</a>
+        
+            <a href="/categoria/games/">Games</a>
+        
+            <a href="/categoria/livros/">Livros</a>
+        
+            <a href="/categoria/tecnologia/">Tecnologia</a>
+        
+            <a href="/categoria/nerds/">Nerds</a>
+        
+    
+</nav>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggleBtn = document.getElementById('gs-menu-toggle');
+        const closeBtn = document.getElementById('gs-menu-close');
+        const offcanvas = document.getElementById('gs-offcanvas');
+        const overlay = document.getElementById('gs-overlay');
+
+        function openMenu() {
+            offcanvas.classList.add('open');
+            overlay.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            offcanvas.classList.remove('open');
+            overlay.classList.remove('open');
+            document.body.style.overflow = 'auto';
+        }
+
+        if (toggleBtn) toggleBtn.addEventListener('click', openMenu);
+        if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+        if (overlay) overlay.addEventListener('click', closeMenu);
+    });
+</script>
+
+<main class="container">
+    <div class="gs-grid">
+        
             
-        </div>
+            
+            <article class="gs-hero">
+                <a href="/quais-servicos-digitais-sao-essenciais-para-empresas-de-tecnologia/">
+                    
+                        <img src="/static/uploads/quais-servicos-digitais-sao-essenciais-para-empresas-de-tecnologia.jpg" alt="Quais serviços digitais são essenciais para empresas de tecnologia?">
+                    
+                    <div class="gs-hero__content">
+                        <div class="gs-hero__meta">
+                            
+                                <span style="color: var(--accent-color); font-weight: 800; margin-right: 10px;">Séries</span>
+                            
+                            28/02/2026
+                        </div>
+                        <h2 class="gs-hero__title">Quais serviços digitais são essenciais para empresas de tecnologia?</h2>
+                    </div>
+                </a>
+            </article>
+
+            
+            <aside class="gs-sidebar">
+                
+                <article class="gs-card" style="box-shadow: none; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; border-radius: 0;">
+                    <a href="/vantagens-das-ferramentas-digitais-no-setor-financeiro-atual/" style="display: flex; gap: 1rem; align-items: center;">
+                        <div class="gs-card__img-wrapper" style="width: 120px; flex-shrink: 0; aspect-ratio: 1/1; border-radius: var(--border-radius);">
+                            
+                                <img src="/static/uploads/vantagens-das-ferramentas-digitais-no-setor-financeiro-atual.jpg" alt="Vantagens das ferramentas digitais no setor financeiro atual" loading="lazy">
+                            
+                        </div>
+                        <div style="flex-grow: 1;">
+                            <div class="gs-card__meta" style="margin-bottom: 0.3rem;">
+                                
+                                    <span style="color: var(--accent-color);">Tecnologia</span>
+                                
+                            </div>
+                            <h3 class="gs-card__title" style="font-size: 1rem;">Vantagens das ferramentas digitais no setor financeiro atual</h3>
+                        </div>
+                    </a>
+                </article>
+                
+                <article class="gs-card" style="box-shadow: none; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; border-radius: 0;">
+                    <a href="/como-escolher-o-parceiro-ideal-para-otimizar-seu-site/" style="display: flex; gap: 1rem; align-items: center;">
+                        <div class="gs-card__img-wrapper" style="width: 120px; flex-shrink: 0; aspect-ratio: 1/1; border-radius: var(--border-radius);">
+                            
+                                <img src="/static/uploads/como-escolher-o-parceiro-ideal-para-otimizar-seu-site.jpg" alt="Como escolher o parceiro ideal para otimizar seu site" loading="lazy">
+                            
+                        </div>
+                        <div style="flex-grow: 1;">
+                            <div class="gs-card__meta" style="margin-bottom: 0.3rem;">
+                                
+                                    <span style="color: var(--accent-color);">Tecnologia</span>
+                                
+                            </div>
+                            <h3 class="gs-card__title" style="font-size: 1rem;">Como escolher o parceiro ideal para otimizar seu site</h3>
+                        </div>
+                    </a>
+                </article>
+                
+                <article class="gs-card" style="box-shadow: none; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; border-radius: 0;">
+                    <a href="/guia-completo-para-criar-lives-profissionais-e-atrair-audiencia/" style="display: flex; gap: 1rem; align-items: center;">
+                        <div class="gs-card__img-wrapper" style="width: 120px; flex-shrink: 0; aspect-ratio: 1/1; border-radius: var(--border-radius);">
+                            
+                                <img src="/static/uploads/guia-completo-para-criar-lives-profissionais-e-atrair-audiencia.jpg" alt="Guia completo para criar lives profissionais e atrair audiência" loading="lazy">
+                            
+                        </div>
+                        <div style="flex-grow: 1;">
+                            <div class="gs-card__meta" style="margin-bottom: 0.3rem;">
+                                
+                                    <span style="color: var(--accent-color);">Nerds</span>
+                                
+                            </div>
+                            <h3 class="gs-card__title" style="font-size: 1rem;">Guia completo para criar lives profissionais e atrair audiência</h3>
+                        </div>
+                    </a>
+                </article>
+                
+            </aside>
+
+            
+            
+            <div class="gs-carousel-wrapper">
+                <h3 class="gs-carousel-header">Em Alta</h3>
+                <div class="gs-carousel">
+                    
+                    <article class="gs-card">
+                        <a href="/top-5-acessorios-de-audio-sem-fio-para-jogos-online/">
+                            <div class="gs-card__img-wrapper">
+                                
+                                    <img src="/static/uploads/top-5-acessorios-de-audio-sem-fio-para-jogos-online.jpg" alt="Top 5 acessórios de áudio sem fio para jogos online" loading="lazy">
+                                
+                            </div>
+                            <div class="gs-card__content">
+                                <div class="gs-card__meta">
+                                    
+                                        <span style="color: var(--accent-color); margin-right: 10px;">Séries</span>
+                                    
+                                </div>
+                                <h3 class="gs-card__title">Top 5 acessórios de áudio sem fio para jogos online</h3>
+                            </div>
+                        </a>
+                    </article>
+                    
+                    <article class="gs-card">
+                        <a href="/eficiencia-logistica-e-controle-de-inventario-o-impacto-estrategico-do-erp-para-distribuidoras-no-atacado-moderno/">
+                            <div class="gs-card__img-wrapper">
+                                
+                                    <img src="/static/uploads/eficiencia-logistica-e-controle-de-inventario-o-impacto-estrategico-do-erp-para-distribuidoras-no-atacado-moderno.jpg" alt="Eficiência Logística e Controle de Inventário: O Impacto Estratégico do ERP para Distribuidoras no Atacado Moderno" loading="lazy">
+                                
+                            </div>
+                            <div class="gs-card__content">
+                                <div class="gs-card__meta">
+                                    
+                                        <span style="color: var(--accent-color); margin-right: 10px;">Tecnologia</span>
+                                    
+                                </div>
+                                <h3 class="gs-card__title">Eficiência Logística e Controle de Inventário: O Impacto Estratégico do ERP para Distribuidoras no Atacado Moderno</h3>
+                            </div>
+                        </a>
+                    </article>
+                    
+                    <article class="gs-card">
+                        <a href="/dicas-para-dominar-shooters-complexos-com-mapas-vastos-e-detalhados/">
+                            <div class="gs-card__img-wrapper">
+                                
+                                    <img src="/static/uploads/dicas-para-dominar-shooters-complexos-com-mapas-vastos-e-detalhados.jpg" alt="Dicas para dominar shooters complexos com mapas vastos e detalhados" loading="lazy">
+                                
+                            </div>
+                            <div class="gs-card__content">
+                                <div class="gs-card__meta">
+                                    
+                                        <span style="color: var(--accent-color); margin-right: 10px;">Tecnologia</span>
+                                    
+                                </div>
+                                <h3 class="gs-card__title">Dicas para dominar shooters complexos com mapas vastos e detalhados</h3>
+                            </div>
+                        </a>
+                    </article>
+                    
+                    <article class="gs-card">
+                        <a href="/como-escolher-o-melhor-proxy-para-campanhas-de-marketing/">
+                            <div class="gs-card__img-wrapper">
+                                
+                                    <img src="/static/uploads/como-escolher-o-melhor-proxy-para-campanhas-de-marketing.jpg" alt="Como escolher o melhor proxy para campanhas de marketing" loading="lazy">
+                                
+                            </div>
+                            <div class="gs-card__content">
+                                <div class="gs-card__meta">
+                                    
+                                        <span style="color: var(--accent-color); margin-right: 10px;">Tecnologia</span>
+                                    
+                                </div>
+                                <h3 class="gs-card__title">Como escolher o melhor proxy para campanhas de marketing</h3>
+                            </div>
+                        </a>
+                    </article>
+                    
+                    <article class="gs-card">
+                        <a href="/curiosidades-sobre-o-oscar-2026/">
+                            <div class="gs-card__img-wrapper">
+                                
+                                    <img src="/static/uploads/curiosidades-sobre-o-oscar-2026.jpg" alt="Curiosidades Sobre o Oscar 2026" loading="lazy">
+                                
+                            </div>
+                            <div class="gs-card__content">
+                                <div class="gs-card__meta">
+                                    
+                                        <span style="color: var(--accent-color); margin-right: 10px;">Filmes</span>
+                                    
+                                </div>
+                                <h3 class="gs-card__title">Curiosidades Sobre o Oscar 2026</h3>
+                            </div>
+                        </a>
+                    </article>
+                    
+                    <article class="gs-card">
+                        <a href="/engenharia-de-software-e-modernizacao-digital-as-melhores-praticas-no-desenvolvimento-web-de-alta-performance/">
+                            <div class="gs-card__img-wrapper">
+                                
+                                    <img src="/static/uploads/engenharia-de-software-e-modernizacao-digital-as-melhores-praticas-no-desenvolvimento-web-de-alta-performance.jpg" alt="Engenharia de Software e Modernização Digital: As Melhores Práticas no Desenvolvimento Web de Alta Performance" loading="lazy">
+                                
+                            </div>
+                            <div class="gs-card__content">
+                                <div class="gs-card__meta">
+                                    
+                                        <span style="color: var(--accent-color); margin-right: 10px;">Tecnologia</span>
+                                    
+                                </div>
+                                <h3 class="gs-card__title">Engenharia de Software e Modernização Digital: As Melhores Práticas no Desenvolvimento Web de Alta Performance</h3>
+                            </div>
+                        </a>
+                    </article>
+                    
+                </div>
+            </div>
+            
+
+            
+            
         
     </div>
-</section>
 
-<footer class="footer" style="background-color: #212529;">
+    
+    <nav class="pagination" style="margin-top: 3rem; text-align: center;">
+        
+            <a href="/page/5/" style="padding: 0.8rem 1.5rem; background: #eee; border-radius: 4px; font-weight: 700; margin-right: 1rem;">Anterior</a>
+        
+        
+            <a href="/page/7/" style="padding: 0.8rem 1.5rem; background: var(--accent-color); color: #fff; border-radius: 4px; font-weight: 700;">Próxima</a>
+        
+    </nav>
+    
+</main>
+
+<footer class="gs-footer">
     <div class="container">
-        <div class="row text-md-start text-center mb-4">
-            <div class="col-md-4 mb-3">
-                
-                <h5 class="fw-bold" style="color: var(--text-main); font-family: var(--font-mono);">Nerd Expo</h5>
-                
-                <p style="font-size: 0.9rem;"></p>
-            </div>
+        <div class="gs-footer__social">
             
-            <div class="col-md-4 mb-3">
-                
-                <h6 class="fw-bold text-uppercase mb-3" style="color: var(--accent);">Links Úteis</h6>
-                <ul class="list-unstyled" style="font-size: 0.9rem;">
-                    
-                        
-                        
-                        
-                        
-                    
-                </ul>
-            </div>
             
-            <div class="col-md-4 mb-3">
-                <h6 class="fw-bold text-uppercase mb-3" style="color: var(--accent);">Redes Sociais</h6>
-                <div class="d-flex gap-3 justify-content-center justify-content-md-start">
-                    
-                    
-                    
-                    
-                </div>
-            </div>
+            
+            
         </div>
         
-        <div class="border-top pt-4 border-secondary">
-            <p><p>@2025</p></p>
+        <ul class="gs-footer__menu">
+            
+        </ul>
+        
+        
+        <div class="gs-footer__copyright">
+            <p>@2025</p>
         </div>
     </div>
 </footer>
 
-
-<div id="cookie-banner" style="display: none; position: fixed; z-index: 9999; background-color: #212529; color: #ffffff; padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); font-family: 'Inter', system-ui, sans-serif; border: 1px solid rgba(255,255,255,0.08);
-     bottom: 0; left: 0; width: 100%; border-top-left-radius: 16px; border-top-right-radius: 16px;
-    
-">
-    <button id="cookie-close" style="position: absolute; top: 12px; right: 16px; background: none; border: none; color: #ffffff; opacity: 0.5; cursor: pointer; font-size: 20px; line-height: 1; padding: 4px; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.5'" aria-label="Fechar">&times;</button>
-    
-    <div style="display: flex; flex-direction: column; gap: 16px;">
-        <div style="padding-right: 16px;">
-            <h6 style="margin: 0 0 8px 0; font-weight: 700; font-size: 16px; color: #ffffff;">Privacidade e Cookies</h6>
-            <p style="margin: 0; font-size: 14px; line-height: 1.5; opacity: 0.85;">
-                Utilizamos cookies para melhorar a sua experiência no site. Ao continuar navegando, você concorda com a nossa Política de Privacidade.
-                
-            </p>
-        </div>
-        
-        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-            <button id="cookie-btn-accept" style="flex: 1; min-width: 120px; background-color: var(--primary-green, #2ea043); color: white; border: none; padding: 10px 16px; border-radius: 6px; cursor: pointer; font-size: 14px; font-weight: 600; white-space: nowrap; transition: filter 0.2s;" onmouseover="this.style.filter='brightness(1.1)'" onmouseout="this.style.filter='brightness(1)'">
-                Entendi
-            </button>
-            <button id="cookie-btn-decline" style="flex: 1; min-width: 120px; background-color: transparent; color: #ffffff; border: 1px solid rgba(255,255,255,0.2); padding: 10px 16px; border-radius: 6px; cursor: pointer; font-size: 14px; font-weight: 600; white-space: nowrap; transition: all 0.2s;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.08)'" onmouseout="this.style.backgroundColor='transparent'">
-                Recusar
-            </button>
-        </div>
-    </div>
-</div>
-
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    var banner = document.getElementById('cookie-banner');
-    var btnAccept = document.getElementById('cookie-btn-accept');
-    var btnDecline = document.getElementById('cookie-btn-decline');
-    var btnClose = document.getElementById('cookie-close');
-    var cookieName = 'lgpd_cookie_consent';
-    var cookieDays = parseInt("30");
-
-    function setCookieAndHide(status) {
-        if (banner) {
-            banner.style.opacity = '0';
-            setTimeout(() => banner.style.display = 'none', 300);
-        }
-        var d = new Date();
-        d.setTime(d.getTime() + (cookieDays * 24 * 60 * 60 * 1000));
-        document.cookie = cookieName + "=" + status + ";expires=" + d.toUTCString() + ";path=/";
-    }
-
-    if (banner) {
-        // Mostra o banner apenas se o cookie não existir
-        if (!document.cookie.split('; ').find(row => row.startsWith(cookieName + '='))) {
-            banner.style.display = 'block';
-            banner.style.opacity = '1';
-        }
-        
-        if (btnAccept) btnAccept.addEventListener('click', function() { setCookieAndHide('accepted'); });
-        if (btnDecline) btnDecline.addEventListener('click', function() { setCookieAndHide('declined'); });
-        if (btnClose) btnClose.addEventListener('click', function() { setCookieAndHide('closed'); });
-    }
-});
-</script>
-
-
-<script>
-    // Script básico para animar entrada de elementos (opcional)
-    document.addEventListener("DOMContentLoaded", function() {
-        // Amazon Button Fixes if any
+    // Carrossel nativo simplificado (substituto das chamadas de script originais caso tenha blocos CMS)
+    document.addEventListener('DOMContentLoaded', function() {
+        document.body.addEventListener('click', function(e) {
+            const btnPrev = e.target.closest('.btn-carousel-prev');
+            if (btnPrev) {
+                const wrapper = btnPrev.closest('div[id^="carrossel-"]');
+                const track = wrapper.querySelector('.dsc-track');
+                const item = track.querySelector('.dsc-item');
+                if (track && item) {
+                    const scrollAmount = item.offsetWidth + 20;
+                    if (track.scrollLeft <= 5) { track.scrollTo({ left: track.scrollWidth, behavior: 'smooth' }); } 
+                    else { track.scrollBy({ left: -scrollAmount, behavior: 'smooth' }); }
+                }
+                return;
+            }
+            const btnNext = e.target.closest('.btn-carousel-next');
+            if (btnNext) {
+                const wrapper = btnNext.closest('div[id^="carrossel-"]');
+                const track = wrapper.querySelector('.dsc-track');
+                const item = track.querySelector('.dsc-item');
+                if (track && item) {
+                    const scrollAmount = item.offsetWidth + 20;
+                    if (track.scrollLeft + track.offsetWidth >= track.scrollWidth - 5) { track.scrollTo({ left: 0, behavior: 'smooth' }); } 
+                    else { track.scrollBy({ left: scrollAmount, behavior: 'smooth' }); }
+                }
+                return;
+            }
+        });
     });
 </script>
-
-<!-- Bootstrap JS (Necessário para os blocos do CMS) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
-
-
 </body>
 </html>

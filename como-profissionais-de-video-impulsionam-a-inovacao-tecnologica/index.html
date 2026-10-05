@@ -4,97 +4,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Como profissionais de vídeo impulsionam a inovação tecnológica - Nerd Expo</title>
-    <meta name="description" content="Site nerd sobre filmes, séries, filmes e games">
+    <meta name="description" content="Descubra como profissionais de vídeo estão liderando a inovação tecnológica e transformando o futuro da comunicação visual. Saiba mais agora!">
     
     
     
     <link rel="icon" href="/static/uploads/nerd-expo.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="/static/uploads/nerd-expo.png">
     
-    
-    <!-- Bootstrap CSS (Necessário para os blocos do CMS) -->
+
+    <link rel="stylesheet" href="/themes/gshow_pop/assets/css/style.css?v=1.1">
+    <!-- Bootstrap Icons (Usado internamente pelo CMS e para redes sociais) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Algumas lógicas do CMS dependem de classes Bootstrap puras (RaioX). Injetamos a versão ultra-leve do bootstrap apenas para os blocos do CMS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <link rel="stylesheet" href="/themes/crazystack/assets/css/style.css?v=2.1">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     
 </head>
 <body>
-<header class="header">
-    <div class="container">
-        <a href="/" class="logo">
-            <span class="cursor"></span>
-            Nerd Expo
-        </a>
-        <nav style="overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch; scrollbar-width: none;">
+<header class="gs-header">
+    <div class="gs-header__container">
+        <!-- Botão Menu Hamburguer -->
+        <button class="gs-header__menu-btn" id="gs-menu-toggle" aria-label="Abrir Menu">
+            <i class="bi bi-list"></i>
+        </button>
+
+        <!-- Logo Centralizada -->
+        <a href="/" class="gs-header__logo">
             
-            <ul class="nav-links" style="display: flex; gap: 1.5rem; list-style: none; padding: 0; margin: 0; align-items: center;">
-                
-                    <li><a href="/"><i class="bi bi-house"></i> Início</a></li>
-                    
-                    
-                    <li><a href="/categoria/filmes/">Filmes</a></li>
-                    
-                    <li><a href="/categoria/series/">Séries</a></li>
-                    
-                    <li><a href="/categoria/games/">Games</a></li>
-                    
-                    <li><a href="/categoria/livros/">Livros</a></li>
-                    
-                    <li><a href="/categoria/tecnologia/">Tecnologia</a></li>
-                    
-                    <li><a href="/categoria/nerds/">Nerds</a></li>
-                    
-                    
-                    
-                    
-                
-            </ul>
-        </nav>
+                <img src="/static/uploads/ICO.png" alt="Nerd Expo">
+            
+        </a>
     </div>
+
+    <!-- Identificador de Categoria Opcional (se não for a página inicial) -->
+    
+        <div class="gs-header__category-tag">Tecnologia</div>
+    
 </header>
 
-<style>
-/* Esconde a scrollbar no nav mas permite scroll horizontal suave em telas pequenas */
-.header nav::-webkit-scrollbar {
-    display: none;
-}
-@media (max-width: 768px) {
-    .header .container {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    .header nav {
-        width: 100%;
-        padding-bottom: 0.5rem;
-    }
-}
-</style>
+<!-- Overlay Escuro do Menu -->
+<div class="gs-overlay" id="gs-overlay"></div>
 
-
-<main class="container">
-<article class="post-layout">
+<!-- Menu Oculto (Offcanvas) -->
+<nav class="gs-nav-offcanvas" id="gs-offcanvas">
+    <button class="gs-nav-offcanvas__close" id="gs-menu-close" aria-label="Fechar Menu">
+        <i class="bi bi-x-lg"></i>
+    </button>
+    <br><br>
     
-    <div class="post-main">
+        <a href="/">INÍCIO</a>
+        
+            <a href="/categoria/filmes/">Filmes</a>
+        
+            <a href="/categoria/series/">Séries</a>
+        
+            <a href="/categoria/games/">Games</a>
+        
+            <a href="/categoria/livros/">Livros</a>
+        
+            <a href="/categoria/tecnologia/">Tecnologia</a>
+        
+            <a href="/categoria/nerds/">Nerds</a>
+        
+    
+</nav>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggleBtn = document.getElementById('gs-menu-toggle');
+        const closeBtn = document.getElementById('gs-menu-close');
+        const offcanvas = document.getElementById('gs-offcanvas');
+        const overlay = document.getElementById('gs-overlay');
+
+        function openMenu() {
+            offcanvas.classList.add('open');
+            overlay.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            offcanvas.classList.remove('open');
+            overlay.classList.remove('open');
+            document.body.style.overflow = 'auto';
+        }
+
+        if (toggleBtn) toggleBtn.addEventListener('click', openMenu);
+        if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+        if (overlay) overlay.addEventListener('click', closeMenu);
+    });
+</script>
+
+<main class="container" style="padding-top: 3rem;">
+    <article>
         <header class="post-header">
-            <div class="post-meta-top">
-                <i class="bi bi-calendar3"></i> 31/01/2026
+            
+                <div style="font-weight: 800; text-transform: uppercase; margin-bottom: 1rem; letter-spacing: 1px;">
+                    <a href="/categoria/tecnologia/" style="color: var(--accent-color);">Tecnologia</a>
+                </div>
+            
+            
+            <h1 class="post-title">Como profissionais de vídeo impulsionam a inovação tecnológica</h1>
+            
+            
+                <p style="font-size: 1.25rem; color: var(--text-muted); max-width: 800px; margin: 0 auto 2rem; line-height: 1.5;">Descubra como profissionais de vídeo estão liderando a inovação tecnológica e transformando o futuro da comunicação visual. Saiba mais agora!</p>
+            
+
+            <div class="post-meta" style="margin-top: 1rem; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); padding: 1rem 0; max-width: 760px; margin-left: auto; margin-right: auto;">
                 
-                <span style="margin: 0 0.5rem; color: var(--border-color);">|</span>
-                <i class="bi bi-person"></i> Juliano Yum
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        
+                            <i class="bi bi-person-circle" style="font-size: 2rem; color: var(--text-muted);"></i>
+                        
+                        <span style="font-weight: 700; color: var(--text-main);">Por <a href="/autor/juliano-yum/" style="color: var(--accent-color);">Juliano Yum</a></span>
+                    </div>
                 
+                <time datetime="2026-01-31" style="margin-left: auto;">
+                    31/01/2026 21:00
+                </time>
             </div>
-            <h1>Como profissionais de vídeo impulsionam a inovação tecnológica</h1>
         </header>
+
         
+            <figure class="post-featured-image">
+                <img src="/static/uploads/como-profissionais-de-video-impulsionam-a-inovacao-tecnologica.jpg" alt="Como profissionais de vídeo impulsionam a inovação tecnológica">
+            </figure>
         
-        <img src="/static/uploads/como-profissionais-de-video-impulsionam-a-inovacao-tecnologica.jpg" alt="None" class="post-featured-image">
+
         
-        
-        
-        
-        <div class="content">
+
+        <div class="post-content">
             <p>A indústria do vídeo está em constante transformação, impulsionada por avanços tecnológicos e pela criatividade dos profissionais que atuam nesse segmento. Os <strong>profissionais de vídeo</strong> desempenham um papel fundamental na adoção e desenvolvimento de novas ferramentas, técnicas e plataformas que elevam a qualidade e o alcance das produções audiovisuais. Esse movimento não apenas revoluciona a forma como o conteúdo é criado e consumido, mas também influencia diversos setores da economia, da educação ao marketing digital.</p>
 <p>Este conteúdo apresenta uma análise detalhada sobre como os profissionais de vídeo contribuem para a <strong>inovação tecnológica</strong>, destacando tendências, desafios e oportunidades que emergem dessa relação dinâmica.</p>
 <p>---</p>
@@ -159,127 +197,38 @@
 <p>Os profissionais de vídeo são agentes fundamentais na aceleração da inovação tecnológica no setor audiovisual. Sua capacidade de adaptação, experimentação e colaboração com empresas de tecnologia resulta em avanços contínuos que transformam a produção, distribuição e consumo de conteúdo. Diante das rápidas mudanças tecnológicas, o investimento em formação, equipamentos modernos e práticas sustentáveis será essencial para manter a relevância e a competitividade nesse mercado dinâmico e em constante evolução.</p>
 <p>A combinação entre criatividade humana e tecnologia avançada promete abrir novas fronteiras para o audiovisual, beneficiando não só os produtores, mas também o público, que passa a desfrutar de experiências cada vez mais ricas e envolventes.</p>
         </div>
+
         
-        
-        
-        
-    </div>
-    
-    <aside class="post-sidebar">
-        <div class="sidebar-box">
-            <h3 class="sidebar-title">Mais Análises</h3>
-            <div style="display: flex; flex-direction: column;">
-                
-                
-                    <div class="sidebar-post">
-                        <a href="/como-impulsionar-seu-negocio-local-com-anuncios-digitais-eficazes/">
-                            
-                            <img src="/static/uploads/como-impulsionar-seu-negocio-local-com-anuncios-digitais-eficazes.jpg" alt="Como impulsionar seu negócio local com anúncios digitais eficazes" class="sidebar-post-img" loading="lazy">
-                            
-                        </a>
-                        <div>
-                            <h4 class="sidebar-post-title">
-                                <a href="/como-impulsionar-seu-negocio-local-com-anuncios-digitais-eficazes/" style="color: var(--text-main); transition: color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-main)'">Como impulsionar seu negócio local com anúncios digitais eficazes</a>
-                            </h4>
-                            <span class="sidebar-post-date"><i class="bi bi-calendar3"></i> 09/09/2026</span>
-                        </div>
-                    </div>
-                
-                
-                
-                    <div class="sidebar-post">
-                        <a href="/solucoes-tecnologicas-avancadas-em-projetos-de-engenharia/">
-                            
-                            <img src="/static/uploads/solucoes-tecnologicas-avancadas-em-projetos-de-engenharia.jpg" alt="Soluções tecnológicas avançadas em projetos de engenharia" class="sidebar-post-img" loading="lazy">
-                            
-                        </a>
-                        <div>
-                            <h4 class="sidebar-post-title">
-                                <a href="/solucoes-tecnologicas-avancadas-em-projetos-de-engenharia/" style="color: var(--text-main); transition: color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-main)'">Soluções tecnológicas avançadas em projetos de engenharia</a>
-                            </h4>
-                            <span class="sidebar-post-date"><i class="bi bi-calendar3"></i> 09/09/2026</span>
-                        </div>
-                    </div>
-                
-                
-                
-                    <div class="sidebar-post">
-                        <a href="/tecnologia-de-impressao-sob-demanda-livros-em-baixa-escala-com-qualidade/">
-                            
-                            <img src="/static/uploads/tecnologia-de-impressao-sob-demanda-livros-em-baixa-escala-com-qualidade.jpg" alt="Tecnologia de impressão sob demanda: livros em baixa escala com qualidade" class="sidebar-post-img" loading="lazy">
-                            
-                        </a>
-                        <div>
-                            <h4 class="sidebar-post-title">
-                                <a href="/tecnologia-de-impressao-sob-demanda-livros-em-baixa-escala-com-qualidade/" style="color: var(--text-main); transition: color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-main)'">Tecnologia de impressão sob demanda: livros em baixa escala com qualidade</a>
-                            </h4>
-                            <span class="sidebar-post-date"><i class="bi bi-calendar3"></i> 08/09/2026</span>
-                        </div>
-                    </div>
-                
-                
-                
-                    <div class="sidebar-post">
-                        <a href="/principais-servicos-que-sao-realizados-por-tecnico-de-informatica-rj/">
-                            
-                            <img src="/static/uploads/principais-servicos-que-sao-realizados-por-tecnico-de-informatica-rj.jpg" alt="Principais serviços que são realizados por técnico de informática RJ" class="sidebar-post-img" loading="lazy">
-                            
-                        </a>
-                        <div>
-                            <h4 class="sidebar-post-title">
-                                <a href="/principais-servicos-que-sao-realizados-por-tecnico-de-informatica-rj/" style="color: var(--text-main); transition: color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-main)'">Principais serviços que são realizados por técnico de informática RJ</a>
-                            </h4>
-                            <span class="sidebar-post-date"><i class="bi bi-calendar3"></i> 03/09/2026</span>
-                        </div>
-                    </div>
-                
-                
-                
-                    <div class="sidebar-post">
-                        <a href="/tecnologias-essenciais-para-bombear-reagentes-corrosivos/">
-                            
-                            <img src="/static/uploads/tecnologias-essenciais-para-bombear-reagentes-corrosivos.jpg" alt="Tecnologias essenciais para bombear reagentes corrosivos" class="sidebar-post-img" loading="lazy">
-                            
-                        </a>
-                        <div>
-                            <h4 class="sidebar-post-title">
-                                <a href="/tecnologias-essenciais-para-bombear-reagentes-corrosivos/" style="color: var(--text-main); transition: color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-main)'">Tecnologias essenciais para bombear reagentes corrosivos</a>
-                            </h4>
-                            <span class="sidebar-post-date"><i class="bi bi-calendar3"></i> 01/09/2026</span>
-                        </div>
-                    </div>
-                
-                
-            </div>
-        </div>
-        
-    </aside>
-    
-</article>
+    </article>
 </main>
 
+<footer class="gs-footer">
+    <div class="container">
+        <div class="gs-footer__social">
+            
+            
+            
+            
+        </div>
+        
+        <ul class="gs-footer__menu">
+            
+        </ul>
+        
+        
+        <div class="gs-footer__copyright">
+            <p>@2025</p>
+        </div>
+    </div>
+</footer>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const botoesFeedback = document.querySelectorAll('.btn-feedback');
-    botoesFeedback.forEach(botao => {
-        botao.addEventListener('click', function() {
-            const container = this.closest('.feedback-container');
-            if (container) {
-                container.innerHTML = `
-                    <p style="color: var(--accent); font-weight: bold; margin-bottom: 8px;"><i class="bi bi-check-circle"></i> Obrigado pelo feedback!</p>
-                    <p style="color: var(--text-muted); margin-bottom: 0;">Usaremos as informações para melhorar nossos reviews de hardware.</p>
-                `;
-            }
-        });
-    });
-
-    // Amazon Carousel Navigation
-    document.body.addEventListener('click', function(e) {
-        const btnPrev = e.target.closest('.btn-carousel-prev');
-        if (btnPrev) {
-            const wrapper = btnPrev.closest('div[id^="carrossel-"]');
-            if (wrapper) {
+    // Carrossel nativo simplificado (substituto das chamadas de script originais caso tenha blocos CMS)
+    document.addEventListener('DOMContentLoaded', function() {
+        document.body.addEventListener('click', function(e) {
+            const btnPrev = e.target.closest('.btn-carousel-prev');
+            if (btnPrev) {
+                const wrapper = btnPrev.closest('div[id^="carrossel-"]');
                 const track = wrapper.querySelector('.dsc-track');
                 const item = track.querySelector('.dsc-item');
                 if (track && item) {
@@ -287,14 +236,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (track.scrollLeft <= 5) { track.scrollTo({ left: track.scrollWidth, behavior: 'smooth' }); } 
                     else { track.scrollBy({ left: -scrollAmount, behavior: 'smooth' }); }
                 }
+                return;
             }
-            return;
-        }
-
-        const btnNext = e.target.closest('.btn-carousel-next');
-        if (btnNext) {
-            const wrapper = btnNext.closest('div[id^="carrossel-"]');
-            if (wrapper) {
+            const btnNext = e.target.closest('.btn-carousel-next');
+            if (btnNext) {
+                const wrapper = btnNext.closest('div[id^="carrossel-"]');
                 const track = wrapper.querySelector('.dsc-track');
                 const item = track.querySelector('.dsc-item');
                 if (track && item) {
@@ -302,124 +248,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (track.scrollLeft + track.offsetWidth >= track.scrollWidth - 5) { track.scrollTo({ left: 0, behavior: 'smooth' }); } 
                     else { track.scrollBy({ left: scrollAmount, behavior: 'smooth' }); }
                 }
+                return;
             }
-            return;
-        }
-    });
-});
-</script>
-
-<footer class="footer" style="background-color: #212529;">
-    <div class="container">
-        <div class="row text-md-start text-center mb-4">
-            <div class="col-md-4 mb-3">
-                
-                <h5 class="fw-bold" style="color: var(--text-main); font-family: var(--font-mono);">Nerd Expo</h5>
-                
-                <p style="font-size: 0.9rem;"></p>
-            </div>
-            
-            <div class="col-md-4 mb-3">
-                
-                <h6 class="fw-bold text-uppercase mb-3" style="color: var(--accent);">Links Úteis</h6>
-                <ul class="list-unstyled" style="font-size: 0.9rem;">
-                    
-                        
-                        
-                        
-                        
-                    
-                </ul>
-            </div>
-            
-            <div class="col-md-4 mb-3">
-                <h6 class="fw-bold text-uppercase mb-3" style="color: var(--accent);">Redes Sociais</h6>
-                <div class="d-flex gap-3 justify-content-center justify-content-md-start">
-                    
-                    
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="border-top pt-4 border-secondary">
-            <p><p>@2025</p></p>
-        </div>
-    </div>
-</footer>
-
-
-<div id="cookie-banner" style="display: none; position: fixed; z-index: 9999; background-color: #212529; color: #ffffff; padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); font-family: 'Inter', system-ui, sans-serif; border: 1px solid rgba(255,255,255,0.08);
-     bottom: 0; left: 0; width: 100%; border-top-left-radius: 16px; border-top-right-radius: 16px;
-    
-">
-    <button id="cookie-close" style="position: absolute; top: 12px; right: 16px; background: none; border: none; color: #ffffff; opacity: 0.5; cursor: pointer; font-size: 20px; line-height: 1; padding: 4px; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.5'" aria-label="Fechar">&times;</button>
-    
-    <div style="display: flex; flex-direction: column; gap: 16px;">
-        <div style="padding-right: 16px;">
-            <h6 style="margin: 0 0 8px 0; font-weight: 700; font-size: 16px; color: #ffffff;">Privacidade e Cookies</h6>
-            <p style="margin: 0; font-size: 14px; line-height: 1.5; opacity: 0.85;">
-                Utilizamos cookies para melhorar a sua experiência no site. Ao continuar navegando, você concorda com a nossa Política de Privacidade.
-                
-            </p>
-        </div>
-        
-        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-            <button id="cookie-btn-accept" style="flex: 1; min-width: 120px; background-color: var(--primary-green, #2ea043); color: white; border: none; padding: 10px 16px; border-radius: 6px; cursor: pointer; font-size: 14px; font-weight: 600; white-space: nowrap; transition: filter 0.2s;" onmouseover="this.style.filter='brightness(1.1)'" onmouseout="this.style.filter='brightness(1)'">
-                Entendi
-            </button>
-            <button id="cookie-btn-decline" style="flex: 1; min-width: 120px; background-color: transparent; color: #ffffff; border: 1px solid rgba(255,255,255,0.2); padding: 10px 16px; border-radius: 6px; cursor: pointer; font-size: 14px; font-weight: 600; white-space: nowrap; transition: all 0.2s;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.08)'" onmouseout="this.style.backgroundColor='transparent'">
-                Recusar
-            </button>
-        </div>
-    </div>
-</div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    var banner = document.getElementById('cookie-banner');
-    var btnAccept = document.getElementById('cookie-btn-accept');
-    var btnDecline = document.getElementById('cookie-btn-decline');
-    var btnClose = document.getElementById('cookie-close');
-    var cookieName = 'lgpd_cookie_consent';
-    var cookieDays = parseInt("30");
-
-    function setCookieAndHide(status) {
-        if (banner) {
-            banner.style.opacity = '0';
-            setTimeout(() => banner.style.display = 'none', 300);
-        }
-        var d = new Date();
-        d.setTime(d.getTime() + (cookieDays * 24 * 60 * 60 * 1000));
-        document.cookie = cookieName + "=" + status + ";expires=" + d.toUTCString() + ";path=/";
-    }
-
-    if (banner) {
-        // Mostra o banner apenas se o cookie não existir
-        if (!document.cookie.split('; ').find(row => row.startsWith(cookieName + '='))) {
-            banner.style.display = 'block';
-            banner.style.opacity = '1';
-        }
-        
-        if (btnAccept) btnAccept.addEventListener('click', function() { setCookieAndHide('accepted'); });
-        if (btnDecline) btnDecline.addEventListener('click', function() { setCookieAndHide('declined'); });
-        if (btnClose) btnClose.addEventListener('click', function() { setCookieAndHide('closed'); });
-    }
-});
-</script>
-
-
-<script>
-    // Script básico para animar entrada de elementos (opcional)
-    document.addEventListener("DOMContentLoaded", function() {
-        // Amazon Button Fixes if any
+        });
     });
 </script>
-
-<!-- Bootstrap JS (Necessário para os blocos do CMS) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
-
-
 </body>
 </html>
